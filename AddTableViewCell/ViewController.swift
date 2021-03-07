@@ -11,7 +11,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
 
     var array = [1,2,3,4,5]
-    var ifHidden = [false,true,false,true,false]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +28,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
         cell.textLabel?.text = "\(array[indexPath.row])"
-        cell.textLabel?.isHidden = ifHidden[indexPath.row]
         return cell
     }
 
