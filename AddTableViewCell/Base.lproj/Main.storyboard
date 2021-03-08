@@ -16,35 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qLr-dh-hoc">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtR-J4-3TN">
-                                <rect key="frame" x="180" y="64" width="54" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yGV-D1-lDw" userLabel="TextField">
+                                <rect key="frame" x="132" y="79" width="150" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="8Ws-lH-5Sl"/>
+                                    <constraint firstAttribute="width" constant="150" id="Sh7-2N-o7h"/>
+                                    <constraint firstAttribute="height" constant="35" id="gry-Ld-ybh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtR-J4-3TN">
+                                <rect key="frame" x="292" y="79" width="55" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="aOW-vB-f31"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="insert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XtU-Qp-ahh"/>
+                                    <action selector="insert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFb-zz-Mje"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qLr-dh-hoc">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qLr-dh-hoc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4WU-DA-Dne"/>
-                            <constraint firstItem="qLr-dh-hoc" firstAttribute="top" secondItem="CtR-J4-3TN" secondAttribute="bottom" constant="30" id="Jn3-eo-7pT"/>
+                            <constraint firstItem="yGV-D1-lDw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4yO-7k-v0C"/>
+                            <constraint firstItem="CtR-J4-3TN" firstAttribute="centerY" secondItem="yGV-D1-lDw" secondAttribute="centerY" id="FQ5-2o-0Y4"/>
                             <constraint firstItem="qLr-dh-hoc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Mgq-ev-eib"/>
-                            <constraint firstItem="CtR-J4-3TN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NCO-8K-OAe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qLr-dh-hoc" secondAttribute="bottom" id="bGV-cH-egD"/>
+                            <constraint firstItem="CtR-J4-3TN" firstAttribute="height" secondItem="yGV-D1-lDw" secondAttribute="height" id="iLr-x1-y38"/>
+                            <constraint firstItem="CtR-J4-3TN" firstAttribute="leading" secondItem="yGV-D1-lDw" secondAttribute="trailing" constant="10" id="osg-Rh-ktZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qLr-dh-hoc" secondAttribute="trailing" id="tcO-f6-naI"/>
+                            <constraint firstItem="qLr-dh-hoc" firstAttribute="top" secondItem="yGV-D1-lDw" secondAttribute="bottom" constant="30" id="ugY-4F-JeJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="qLr-dh-hoc" id="jmj-B2-ZSJ"/>
+                        <outlet property="tableView" destination="qLr-dh-hoc" id="Ik6-kk-6Jp"/>
+                        <outlet property="textField" destination="yGV-D1-lDw" id="t31-ni-38j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
