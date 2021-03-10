@@ -70,8 +70,6 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     //cellの追加
     @IBAction func insert(_ sender: Any) {
-
-
         let text = textField.text ?? ""
         let letter = text.prefix(1).uppercased()
         print(letter)
@@ -83,9 +81,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             row[row.endIndex - 1].insert(text, at: row[row.endIndex - 1].endIndex)
             tableView.insertRows(at: [IndexPath(row: row[row.endIndex - 1].endIndex - 1, section: row.endIndex - 1)], with: .automatic)
         }
-
         textField.text = ""
-
     }
 }
 
